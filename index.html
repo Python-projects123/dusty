@@ -24,21 +24,65 @@
     a:hover {
       text-decoration: underline;
     }
+
+    * { cursor: none; }
+
+    .cursor {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .cursor-f {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+    }
+
+    .cursor.hidden, .cursor-f.hidden { opacity: 0; }
+    .cursor.clicked { transform: scale(0.7); }
+
+    main { display: none; }
   </style>
 </head>
 <body>
 
   <div id="app"></div>
 
-  <h1 id="heading">Hello, welcome to my website! Here find some stuff about me.</h1>
+  <h1 id="heading">This is a test for enterprises.</h1>
 
-  <p id="intro">Hello, my name is xox. I love proggraming, and am currently learning HTML. I know Python, and am also learning C++.</p>
+  <p id="intro">This page is blank.</p>
 
   <h4>I love small heading!</h4>
 
   <a href="https://opus.ixlmathandlearning.workers.dev/" target="_blank">Try out my browser now! It is a awesome website!</a>
 
   <i>hello world!</i>
+
+  <main>
+    <div class="bg">
+      <div class="bg-main">
+        <div class="bg-main-img"></div>
+      </div>
+      <div class="bg-circle-wrapper">
+        <div class="bg-circle">
+          <div class="bg-circle-img"></div>
+        </div>
+      </div>
+    </div>
+    <div class="btns">
+      <button class="arrow prev" onclick="go('prev')"></button>
+      <button class="arrow next" onclick="go('next')"></button>
+    </div>
+  </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="js/script.js"></script>
