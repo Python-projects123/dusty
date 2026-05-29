@@ -17,5 +17,15 @@
 </head>
 <body>
   <h3>reset</h3>
+
+  <script>
+    let lastKey = '';
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'e' && lastKey === 'e') {
+        window.location.href = 'https://python-projects123.github.io/dusty/nts';
+      }
+      lastKey = e.key;
+    });
+  </script>
 </body>
 </html>
